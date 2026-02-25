@@ -1,0 +1,155 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "icon_theme": "Warm Charmed Icons",
+  "theme": {
+    "mode": "system",
+    "light": "Tokyo Night Light",
+    "dark": "Aura Dark",
+  },
+  "experimental.theme_overrides": {
+    "background": "#15141C00",
+    "editor.background": "#15141C7C",
+    "panel.background": "#15141CAC",
+    "title_bar.background": "#15141CAC",
+    "background.appearance": "transparent",
+    "terminal.background": "#00000000",
+    "editor.gutter.background": "#15141CBC",
+    "status_bar.background": "#15141C8C",
+    "tab_bar.background": "#15141C8C",
+  },
+  "theme_overrides": {
+    "Aura Dark": {
+      "border.variant": "#15141C",
+      "border": "#15141C",
+      "title_bar.background": "#15141C",
+      "pane.focused_border": "#4E466E",
+      "players": [
+        {
+          "cursor": "#bd9dff",
+        },
+      ],
+      "syntax": {
+        "comment": { "font_style": "italic" },
+        "comment.doc": { "font_style": "italic" },
+      },
+    },
+  },
+  "title_bar": {
+    "show_onboarding_banner": false,
+    "show_project_items": false,
+    "show_branch_name": false,
+    "show_user_menu": false,
+  },
+  "tab_bar": {
+    "show": false,
+  },
+  "toolbar": {
+    "quick_actions": false,
+  },
+  "project_panel": {
+    "dock": "right",
+    "default_width": 400,
+    "hide_root": true,
+    "auto_fold_dirs": false,
+    "starts_open": false,
+    "git_status": false,
+    "sticky_scroll": false,
+    "scrollbar": {
+      "show": "never",
+    },
+    "indent_guides": {
+      "show": "never",
+    },
+  },
+  "outline_panel": {
+    "default_width": 300,
+    "indent_guides": {
+      "show": "never",
+    },
+  },
+  "file_finder": {
+    "modal_max_width": "large",
+  },
+  "scrollbar": {
+    "show": "never",
+  },
+  "gutter": {
+    "min_line_number_digits": 0,
+    "folds": false,
+    "runnables": false,
+  },
+  "indent_guides": {
+    "enabled": false,
+  },
+  "ui_font_family": "JetBrainsMono Nerd Font Mono",
+  "ui_font_size": 18,
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_size": 18,
+  "buffer_line_height": {
+    "custom": 2,
+  },
+  "agent_buffer_font_size": 18,
+  "vim_mode": true,
+  "relative_line_numbers": "enabled",
+  "cursor_shape": "block",
+  "cursor_blink": false,
+  "drag_and_drop_selection": {
+    "enabled": false,
+  },
+  "seed_search_query_from_cursor": "never",
+  "show_whitespaces": "none",
+  "tab_size": 2,
+  "show_completions_on_input": false,
+  "format_on_save": "on",
+  "horizontal_scroll_margin": 1,
+  "vertical_scroll_margin": 1,
+  "when_closing_with_no_tabs": "keep_window_open",
+  "close_on_file_delete": true,
+  "restore_on_file_reopen": true,
+  "restore_on_startup": "last_workspace",
+  "centered_layout": {
+    "left_padding": 0.07,
+    "right_padding": 0.07,
+  },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "terminal": {
+    "dock": "right",
+    "font_size": 20.0,
+  },
+  "sticky_scroll": {
+    "enabled": false,
+  },
+  "minimap": {
+    "show": "never",
+  },
+  "base_keymap": "VSCode",
+
+  "languages": {
+    "PHP": {
+      "language_servers": ["intelephense", "!phpactor"],
+      // run laravel pint on save
+      "formatter": {
+        "external": {
+          "command": "bash",
+          "arguments": [
+            "-c",
+            "cat > {buffer_path} && ./vendor/bin/pint --quiet {buffer_path} && cat {buffer_path}",
+          ],
+        },
+      },
+    },
+  },
+  "file_types": {
+    "PHP": ["*.php", "_ide_helper.php"],
+    "Blade": ["*.blade.php"],
+  },
+}

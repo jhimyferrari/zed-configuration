@@ -135,7 +135,7 @@
 
   "languages": {
     "PHP": {
-      "language_servers": ["intelephense", "!phpactor"],
+      "language_servers": ["phptools"],
       // run laravel pint on save
       "formatter": {
         "external": {
@@ -145,6 +145,14 @@
             "cat > {buffer_path} && ./vendor/bin/pint --quiet {buffer_path} && cat {buffer_path}",
           ],
         },
+      },
+    },
+  },
+  "lsp": {
+    "phptools": {
+      "initialization_options": {
+        "0": "",
+        "php.stubs": ["*", "composer"],
       },
     },
   },

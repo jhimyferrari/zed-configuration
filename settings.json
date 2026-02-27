@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": true,
   "icon_theme": "Warm Charmed Icons",
   "theme": {
     "mode": "system",
@@ -89,9 +90,9 @@
     "enabled": false,
   },
   "ui_font_family": "JetBrainsMono Nerd Font Mono",
-  "ui_font_size": 18,
+  "ui_font_size": 20,
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
-  "buffer_font_size": 18,
+  "buffer_font_size": 20,
   "buffer_line_height": {
     "custom": 2,
   },
@@ -147,7 +148,13 @@
         },
       },
     },
+    "Java": {
+      "language_servers": ["jdtls"],
+      "tab_size": 4,
+      "hard_tabs": false,
+    },
   },
+
   "file_types": {
     "PHP": ["*.php", "_ide_helper.php"],
     "Blade": ["*.blade.php"],

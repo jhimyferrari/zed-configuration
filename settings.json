@@ -136,7 +136,7 @@
 
   "languages": {
     "PHP": {
-      "language_servers": ["intelephense", "!phpactor"],
+      "language_servers": ["phptools"],
       // run laravel pint on save
       "formatter": {
         "external": {
@@ -155,6 +155,14 @@
     },
   },
 
+  "lsp": {
+    "phptools": {
+      "initialization_options": {
+        "0": "",
+        "php.stubs": ["*", "composer"],
+      },
+    },
+  },
   "file_types": {
     "PHP": ["*.php", "_ide_helper.php"],
     "Blade": ["*.blade.php"],

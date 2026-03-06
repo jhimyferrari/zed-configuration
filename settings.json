@@ -153,6 +153,9 @@
       "tab_size": 4,
       "hard_tabs": false,
     },
+    "SQL": {
+      "language_servers": ["postgres-language-server", "..."],
+    },
   },
 
   "lsp": {
@@ -162,7 +165,14 @@
         "php.stubs": ["*", "composer"],
       },
     },
+    "jdtls": {
+      "settings": {
+        "java_home": "/usr/lib/jvm/java-21-openjdk-amd64",
+        "lombok_support": true,
+      },
+    },
   },
+
   "file_types": {
     "PHP": ["*.php", "_ide_helper.php"],
     "Blade": ["*.blade.php"],
